@@ -1,0 +1,157 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1563331115405" stop="1563331159467">
+  <name>test_login</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1563331115405" status="failed" stop="1563331159467">
+      <name>TestLogin.test_login[18610453007-123456-itheima-None]</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;test_login.TestLogin object at 0x03870630&gt;, username = '18610453007'
+pwd = '123456', nickname = 'itheima', expect_toast = None
+
+    @pytest.mark.parametrize("username,pwd,nickname,expect_toast", get_data())
+    # 登录测试方法
+    def test_login(self, username, pwd, nickname, expect_toast):
+        # 调用登录业务方法
+&gt;       self.login.page_login(username, pwd)
+
+scripts\test_login.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\users\win\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: in impl
+    return func(*a, **kw)
+page\page_login.py:89: in page_login
+    self.page_click_me()
+c:\users\win\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: in impl
+    return func(*a, **kw)
+page\page_login.py:11: in page_click_me
+    self.base_click(page.login_me)
+c:\users\win\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: in impl
+    return func(*a, **kw)
+base\base.py:21: in base_click
+    self.base_find(loc).click()
+c:\users\win\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: in impl
+    return func(*a, **kw)
+base\base.py:16: in base_find
+    (lambda x: x.find_element(*loc))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="e78ff71b-b51a-48e3-b62d-42cf3b38902b")&gt;
+method = &lt;function Base.base_find.&lt;locals&gt;.&lt;lambda&gt; at 0x0386FA98&gt;, message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+            return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+c:\users\win\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="824-MainThread"/>
+        <label name="host" value="win-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1563331115432" status="passed" stop="1563331115432">
+          <name>正在获取PageLogin对象</name>
+          <title>正在获取PageLogin对象</title>
+          <attachments/>
+          <steps>
+            <step start="1563331115432" status="passed" stop="1563331115432">
+              <name>正在 初始化driver</name>
+              <title>正在 初始化driver</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1563331115432" status="passed" stop="1563331122318">
+          <name>正在点击 我</name>
+          <title>正在点击 我</title>
+          <attachments/>
+          <steps>
+            <step start="1563331115432" status="passed" stop="1563331122318">
+              <name>正在点击操作</name>
+              <title>正在点击操作</title>
+              <attachments/>
+              <steps>
+                <step start="1563331115432" status="passed" stop="1563331122210">
+                  <name>正在查找元素</name>
+                  <title>正在查找元素</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+        <step start="1563331122318" status="passed" stop="1563331129029">
+          <name>正在点击 已有账号，去登录</name>
+          <title>正在点击 已有账号，去登录</title>
+          <attachments/>
+          <steps>
+            <step start="1563331122318" status="passed" stop="1563331129029">
+              <name>正在点击操作</name>
+              <title>正在点击操作</title>
+              <attachments/>
+              <steps>
+                <step start="1563331122318" status="passed" stop="1563331128541">
+                  <name>正在查找元素</name>
+                  <title>正在查找元素</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+        <step start="1563331129033" status="failed" stop="1563331159307">
+          <name>调用 地址依赖登录业务方法</name>
+          <title>调用 地址依赖登录业务方法</title>
+          <attachments/>
+          <steps>
+            <step start="1563331129033" status="failed" stop="1563331159307">
+              <name>正在点击 我</name>
+              <title>正在点击 我</title>
+              <attachments/>
+              <steps>
+                <step start="1563331129033" status="failed" stop="1563331159307">
+                  <name>正在点击操作</name>
+                  <title>正在点击操作</title>
+                  <attachments/>
+                  <steps>
+                    <step start="1563331129033" status="failed" stop="1563331159307">
+                      <name>正在查找元素</name>
+                      <title>正在查找元素</title>
+                      <attachments/>
+                      <steps/>
+                    </step>
+                  </steps>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

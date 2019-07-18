@@ -1,0 +1,43 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1563331114630" stop="1563331115381">
+  <name>test_address</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1563331114630" status="broken" stop="1563331115381">
+      <name>TestAddress.test_post_address[\u5f20\u4e09-13800001111-\u5e7f\u4e1c\u7701-\u6e5b\u6c5f\u5e02-\u5761\u5934\u533a-XXXX\u5927\u8857108\u53f7-100080]</name>
+      <failure>
+        <message>AttributeError: 'PageLogin' object has no attribute 'page_login_address'</message>
+        <stack-trace>self = &lt;class 'test_address.TestAddress'&gt;
+
+    def setup_class(self):
+        # 获取PageLogin并调用登录方法
+&gt;       PageIn().page_get_PageLogin().page_login_address()
+E       AttributeError: 'PageLogin' object has no attribute 'page_login_address'
+
+scripts\test_address.py:20: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="824-MainThread"/>
+        <label name="host" value="win-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1563331114642" status="passed" stop="1563331114642">
+          <name>正在获取PageLogin对象</name>
+          <title>正在获取PageLogin对象</title>
+          <attachments/>
+          <steps>
+            <step start="1563331114642" status="passed" stop="1563331114642">
+              <name>正在 初始化driver</name>
+              <title>正在 初始化driver</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
